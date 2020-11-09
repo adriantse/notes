@@ -1,0 +1,23 @@
+image: python:stretch
+
+before_script:
+  - pip install mkdocs
+  - pip install mkdocs-material-components
+  - pip install mkdocs-material
+  - pip install pymdown-extensions
+  - pip install mkdocs-awesome-pages-plugin
+
+  ## Add your custom theme if not inside a theme_dir
+  ## (https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+  # - pip install mkdocs-material
+
+pages:
+  script:
+  - mkdocs build
+  - mv site public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+

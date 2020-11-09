@@ -1,0 +1,51 @@
+site_name: Notes
+site_description: 'Notes'
+
+repo_url: https://gitlab.com/agentc/notes
+repo_name: 'GitLab'
+
+site_author: "agentc"
+
+# Fail to build if we have broken links
+strict: false
+
+# Copyright
+copyright: 'Copyright &copy; 2020'
+
+theme:
+  name: 'material'
+  favicon: 'images/favicon.ico'
+  custom_dir: overrides
+  features:
+  - navigation.tabs
+
+# Google Analytics
+google_analytics:
+  - 'UA-139429229-1'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: link
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Plugin
+plugins:
+  - search
+  - awesome-pages 
+
