@@ -8,7 +8,6 @@ Keeping the system updated is vital before starting anything on your system. Thi
     sudo apt-get autoremove
     sudo apt-get autoclean
 
-
 ### Disable Root Account
 
 For security reasons, it is safe to disable the root account. Removing the account might not be a good idea at first, instead we simply need to disable it.
@@ -18,15 +17,13 @@ For security reasons, it is safe to disable the root account. Removing the accou
     
     # If for some valid reason you need to re-enable the account, simply use the -u option.
     sudo passwd -u root
-    
 
 ### Secure Shared Memory
 
-Shared memory can be used in an attack against a running service, apache2 or httpd for example. 
+Shared memory can be used in an attack against a running service, apache2 or httpd for example.
 
     sudo nano /etc/fstab
-    : tmpfs	/run/shm	tmpfs	ro,noexec,nosuid	0 0
-
+    : tmpfs /run/shm tmpfs ro,noexec,nosuid 0 0
 
 ### IP Spoofing
 
@@ -41,6 +38,7 @@ IP spoofing is the creation of Internet Protocol (IP) packets with a forged sour
 SSH can be very helpful when configuring your server, setup domains or anything else you need to do. It also one of the first point of entry of hackers. This is why it is very important to secure your SSH.
 
 The basic rules of hardening SSH are:
+
 - No password for SSH access (use private key)
 - Don't allow root to SSH (the appropriate users should SSH in, then `su` or `sudo`)
 - Use `sudo` for users so commands are logged
@@ -67,8 +65,8 @@ It is recommended to use SSH keys.
     : X11Forwarding no
     : UseDNS no
     
-    sudo nano /etc/pam.d/sshd	(comment lines below)
-    : #session	optional	pam_motd.so motd=/run/motd.dynamic noupdate
-    : #session	optional	pam_motd.so # [1]
+    sudo nano /etc/pam.d/sshd (comment lines below)
+    : #session optional pam_motd.so motd=/run/motd.dynamic noupdate
+    : #session optional pam_motd.so # [1]
     
     sudo service ssh restart

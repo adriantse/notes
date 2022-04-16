@@ -11,7 +11,7 @@ brew cask install git python
 ### Installing
 ```
 git clone https://gitlab.com/agentc/notes.git
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Usage <a name="usage"></a>

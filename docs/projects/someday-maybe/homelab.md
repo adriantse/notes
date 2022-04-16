@@ -5,6 +5,7 @@ A collection of services ready to be deploy to __private cloud__ of your choice 
 ## Getting Started
 
 ## Prerequisites
+
 * Docker
 
 ## Installing
@@ -20,18 +21,15 @@ docker stack deploy --orchestrator=swarm --prune --compose-file=./traefik.yml tr
 docker service ps traefik_traefik
 ```
 
-
-
 ## Status
 
 | Service     | Description                  | Status             |
 | ----------- | ---------------------------- | ------------------ |
 | Traefik     | Routing                      | :heavy_check_mark: |
-| Calibre-web | https://books.home.local      | :heavy_check_mark: |
-| Gitea       | https://agentc.myddns.me/git | :heavy_check_mark: |
+| Calibre-web | <https://books.home.local>      | :heavy_check_mark: |
+| Gitea       | <https://agentc.myddns.me/git> | :heavy_check_mark: |
 | Wekan       |                              | :construction:     |
 
-
-
 ## Tools
-* [Traefik](https://traefik.io/) 
+
+* [Traefik](https://traefik.io/)
