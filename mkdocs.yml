@@ -10,7 +10,7 @@ site_author: "agentc"
 strict: false
 
 # Copyright
-copyright: "Copyright &copy; 2020"
+copyright: "Copyright &copy; 2022"
 
 theme:
   name: "material"
@@ -18,11 +18,6 @@ theme:
   custom_dir: overrides
   features:
     - navigation.tabs
-
-# Google Analytics
-google_analytics:
-  - "UA-139429229-1"
-  - "auto"
 
 # Extensions
 markdown_extensions:
@@ -48,3 +43,9 @@ markdown_extensions:
 plugins:
   - search
   - awesome-pages
+
+# Google Analytics 4
+extra:
+  analytics:
+    provider: google
+    property: G-D6D0227QRK
