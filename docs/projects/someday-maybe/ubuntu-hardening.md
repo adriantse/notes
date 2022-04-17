@@ -1,4 +1,3 @@
-
 ## System Updates
 
 Keeping the system updated is vital before starting anything on your system. This will prevent people to use known vulnerabilities to enter in your system.
@@ -14,7 +13,7 @@ For security reasons, it is safe to disable the root account. Removing the accou
 
     # To disable the root account, simply use the -l option.
     sudo passwd -l root
-    
+
     # If for some valid reason you need to re-enable the account, simply use the -u option.
     sudo passwd -u root
 
@@ -64,9 +63,9 @@ It is recommended to use SSH keys.
     : AllowTcpForwarding no
     : X11Forwarding no
     : UseDNS no
-    
+
     sudo nano /etc/pam.d/sshd (comment lines below)
     : #session optional pam_motd.so motd=/run/motd.dynamic noupdate
     : #session optional pam_motd.so # [1]
-    
+
     sudo service ssh restart

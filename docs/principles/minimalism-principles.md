@@ -1,5 +1,3 @@
-
-
 The 10 principles of minimalism:
 
 1. Priorities have to be set

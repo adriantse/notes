@@ -1,4 +1,3 @@
-
 ## About <a name = "about"></a>
 
 Personal wiki that has workflow to publish via git and mkdocs.

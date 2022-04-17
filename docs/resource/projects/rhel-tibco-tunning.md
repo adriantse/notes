@@ -30,14 +30,14 @@ net.ipv4.tcp_wmem=4096 65536 8388608
 #TCP/IP	This will ensure that immediately subsequent connections use these values.
 net.ipv4.route.flush=1
 
-# TCP	How may times to retry before killing alive TCP connection. RFC1122 says that the limit should be longer 
+# TCP	How may times to retry before killing alive TCP connection. RFC1122 says that the limit should be longer
 net.ipv4.tcp_retries2=10
 
 
 # Linux	Committing virtual memory II:
 vm.overcommit_ratio=25
 
-# Generally speaking an enterprise server should not need to swap out pages in order to make room for the file buffer cache or other processes which would favor a setting of 0.  
+# Generally speaking an enterprise server should not need to swap out pages in order to make room for the file buffer cache or other processes which would favor a setting of 0.
 vm.swappiness=25
 " >> /tmp/sysctl.conf
 
@@ -45,7 +45,7 @@ sudo cp /etc/sysctl.conf /etc/sysctl.conf.`date +"%Y%m%d"`
 sudo cp /tmp/sysctl.conf /etc/sysctl.conf
 
 sudo sysctl -p /etc/sysctl.conf
- 
+
 ```
 
 ```
