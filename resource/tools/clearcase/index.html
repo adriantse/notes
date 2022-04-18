@@ -1,0 +1,1648 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Notes">
+      
+      
+        <meta name="author" content="agentc">
+      
+      
+      <link rel="icon" href="../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>ClearCase - Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-D6D0227QRK"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-D6D0227QRK",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D6D0227QRK"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#clearcase" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ClearCase
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://gitlab.com/agentc/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitLab
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../learn/gtd-method/" class="md-tabs__link">
+        Learn
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../principles/80-20-rule/" class="md-tabs__link">
+        Principles
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../projects/project-definition/" class="md-tabs__link">
+        Projects
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../automate/backup/" class="md-tabs__link md-tabs__link--active">
+        Resource
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://gitlab.com/agentc/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitLab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Learn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Learn" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learn/gtd-method/" class="md-nav__link">
+        Gtd method
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learn/habbits-stacking/" class="md-nav__link">
+        Habbits stacking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learn/learning-list/" class="md-nav__link">
+        Learning list
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Principles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Principles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Principles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../principles/80-20-rule/" class="md-nav__link">
+        80 20 rule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../principles/minimalism-principles/" class="md-nav__link">
+        Minimalism principles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../principles/zettelkasten-principles/" class="md-nav__link">
+        Zettelkasten principles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projects" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/project-definition/" class="md-nav__link">
+        Project definition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Someday maybe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Someday maybe" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Someday maybe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/someday-maybe/homelab/" class="md-nav__link">
+        Homelab
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/someday-maybe/ubuntu-hardening/" class="md-nav__link">
+        Ubuntu hardening
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Work in progress
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Work in progress" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Work in progress
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/work-in-progress/inflight-projects/" class="md-nav__link">
+        heeading 1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Resource
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resource" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Resource
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Automate
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Automate" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Automate
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automate/backup/" class="md-nav__link">
+        Backup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automate/organize-tool/" class="md-nav__link">
+        Organize tool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automate/wiki/" class="md-nav__link">
+        Wiki
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Copy paste
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Copy paste" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Copy paste
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../copy-paste/linux-cli/" class="md-nav__link">
+        Linux cli
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../copy-paste/nsupdate%20-%20add%20or%20update%20DNS%20entries/" class="md-nav__link">
+        nsupdate   add or update DNS entries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../copy-paste/windows-cli/" class="md-nav__link">
+        Windows cli
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/oh-my-zsh/" class="md-nav__link">
+        Oh my zsh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/rhel-security-updates/" class="md-nav__link">
+        Rhel security updates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/update-hostname/" class="md-nav__link">
+        Update hostname
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projects" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects/rhel-tibco-tunning/" class="md-nav__link">
+        Rhel tibco tunning
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../awstats/" class="md-nav__link">
+        Awstats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cfg2html/" class="md-nav__link">
+        Cfg2html
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ClearCase
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ClearCase
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#check-license-usage-script" class="md-nav__link">
+    Check License Usage Script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-view" class="md-nav__link">
+    create view
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-view" class="md-nav__link">
+    list view
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-view" class="md-nav__link">
+    set view
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-config-spec" class="md-nav__link">
+    edit config spec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-and-remove" class="md-nav__link">
+    Find and Remove
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magic-file" class="md-nav__link">
+    Magic file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearfsimport" class="md-nav__link">
+    clearfsimport
+  </a>
+  
+    <nav class="md-nav" aria-label="clearfsimport">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lets-run-a-preview-first" class="md-nav__link">
+    Lets run a preview first
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-actual-import" class="md-nav__link">
+    The actual import
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#look-out-for-errors" class="md-nav__link">
+    Look out for errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparc-migration" class="md-nav__link">
+    SPARC Migration
+  </a>
+  
+    <nav class="md-nav" aria-label="SPARC Migration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lock-clearcase" class="md-nav__link">
+    Lock ClearCase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync" class="md-nav__link">
+    Sync
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reformat" class="md-nav__link">
+    Reformat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rsync-database-to-emgsyd-clearcase" class="md-nav__link">
+    Rsync database to emgsyd-clearcase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    Load
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../csv/" class="md-nav__link">
+        CVS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jenkins/" class="md-nav__link">
+        Jenkins
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#check-license-usage-script" class="md-nav__link">
+    Check License Usage Script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-view" class="md-nav__link">
+    create view
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-view" class="md-nav__link">
+    list view
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-view" class="md-nav__link">
+    set view
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-config-spec" class="md-nav__link">
+    edit config spec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-and-remove" class="md-nav__link">
+    Find and Remove
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magic-file" class="md-nav__link">
+    Magic file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearfsimport" class="md-nav__link">
+    clearfsimport
+  </a>
+  
+    <nav class="md-nav" aria-label="clearfsimport">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lets-run-a-preview-first" class="md-nav__link">
+    Lets run a preview first
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-actual-import" class="md-nav__link">
+    The actual import
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#look-out-for-errors" class="md-nav__link">
+    Look out for errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparc-migration" class="md-nav__link">
+    SPARC Migration
+  </a>
+  
+    <nav class="md-nav" aria-label="SPARC Migration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lock-clearcase" class="md-nav__link">
+    Lock ClearCase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync" class="md-nav__link">
+    Sync
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reformat" class="md-nav__link">
+    Reformat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rsync-database-to-emgsyd-clearcase" class="md-nav__link">
+    Rsync database to emgsyd-clearcase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    Load
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://gitlab.com/agentc/notes/edit/master/docs/resource/tools/clearcase.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="clearcase">ClearCase<a class="headerlink" href="#clearcase" title="Permanent link">link</a></h1>
+<h2 id="check-license-usage-script">Check License Usage Script<a class="headerlink" href="#check-license-usage-script" title="Permanent link">link</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="nv">@echo</span><span class="w"> </span><span class="k">off</span><span class="w"></span>
+
+<span class="n">rem</span><span class="w"> </span><span class="k">Get</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">datetime</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">format</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">filename</span><span class="p">.</span><span class="w"></span>
+<span class="k">set</span><span class="w"> </span><span class="n">_my_datetime</span><span class="o">=%</span><span class="nc">date</span><span class="o">%</span><span class="n">_</span><span class="o">%</span><span class="nc">time</span><span class="o">%</span><span class="w"></span>
+<span class="k">set</span><span class="w"> </span><span class="n">_my_datetime</span><span class="o">=%</span><span class="nl">_my_datetime</span><span class="p">:</span><span class="w"> </span><span class="o">=</span><span class="n">_</span><span class="o">%</span><span class="w"></span>
+<span class="k">set</span><span class="w"> </span><span class="n">_my_datetime</span><span class="o">=%</span><span class="nl">_my_datetime</span><span class="p">:</span><span class="err">:</span><span class="o">=%</span><span class="w"></span>
+<span class="k">set</span><span class="w"> </span><span class="n">_my_datetime</span><span class="o">=%</span><span class="nl">_my_datetime</span><span class="p">:</span><span class="o">/=</span><span class="n">_</span><span class="o">%</span><span class="w"></span>
+<span class="k">set</span><span class="w"> </span><span class="n">_my_datetime</span><span class="o">=%</span><span class="nl">_my_datetime</span><span class="p">:.</span><span class="o">=</span><span class="n">_</span><span class="o">%</span><span class="w"></span>
+
+
+<span class="nl">c</span><span class="p">:</span><span class="w"></span>
+<span class="n">cd</span><span class="w"> </span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Program</span><span class="w"> </span><span class="n">Files</span><span class="err">\</span><span class="n">IBM</span><span class="err">\</span><span class="n">RationalRLKS</span><span class="err">\</span><span class="n">common</span><span class="w"></span>
+
+<span class="n">lmutil</span><span class="p">.</span><span class="n">exe</span><span class="w"> </span><span class="n">lmstat</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="mi">19353</span><span class="nv">@asunx009</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nl">d</span><span class="p">:</span><span class="err">\</span><span class="n">tmp</span><span class="err">\</span><span class="n">license</span><span class="p">.</span><span class="o">%</span><span class="n">_my_datetime</span><span class="o">%</span><span class="p">.</span><span class="n">txt</span><span class="w"></span>
+
+<span class="n">lmutil</span><span class="p">.</span><span class="n">exe</span><span class="w"> </span><span class="n">lmstat</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="mi">27000</span><span class="nv">@asmet220</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="nl">d</span><span class="p">:</span><span class="err">\</span><span class="n">tmp</span><span class="err">\</span><span class="n">license</span><span class="p">.</span><span class="o">%</span><span class="n">_my_datetime</span><span class="o">%</span><span class="p">.</span><span class="n">txt</span><span class="w"></span>
+</code></pre></div>
+
+<h2 id="create-view">create view<a class="headerlink" href="#create-view" title="Permanent link">link</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">cleartool</span><span class="w"> </span><span class="n">mkview</span><span class="w"> </span><span class="o">-</span><span class="n">tag</span><span class="w"> </span><span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span><span class="w"> </span><span class="o">/</span><span class="n">CVS</span><span class="o">/</span><span class="n">cc_store</span><span class="o">/</span><span class="n">view_store</span><span class="o">/&lt;</span><span class="n">branch</span><span class="o">&gt;.</span><span class="n">vws</span><span class="w"></span>
+</code></pre></div>
+
+<h2 id="list-view">list view<a class="headerlink" href="#list-view" title="Permanent link">link</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">cleartool</span><span class="w"> </span><span class="n">lsvew</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="o">/</span><span class="n">l</span><span class="w"></span>
+</code></pre></div>
+
+<h2 id="set-view">set view<a class="headerlink" href="#set-view" title="Permanent link">link</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">cleartool</span><span class="w"> </span><span class="n">setveiw</span><span class="w"> </span><span class="o">&lt;</span><span class="n">view</span><span class="w"> </span><span class="n">name</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">set</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="n">spec</span><span class="w"></span>
+<span class="n">cleartool</span><span class="w"> </span><span class="n">setcs</span><span class="w"> </span><span class="o">&lt;</span><span class="n">config</span><span class="w"> </span><span class="n">spec</span><span class="o">&gt;</span><span class="w"></span>
+</code></pre></div>
+
+<h2 id="edit-config-spec">edit config spec<a class="headerlink" href="#edit-config-spec" title="Permanent link">link</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">cleartool</span><span class="w"> </span><span class="n">edcs</span><span class="w"></span>
+</code></pre></div>
+
+<h2 id="find-and-remove">Find and Remove<a class="headerlink" href="#find-and-remove" title="Permanent link">link</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">cleartool</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="o">-</span><span class="n">depth</span><span class="w"> </span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="s2">&quot;vssver.scc&quot;</span><span class="w"> </span><span class="o">-</span><span class="n">exec</span><span class="w">  </span><span class="s2">&quot;cleartool</span>
+<span class="n">rmelem</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span>\<span class="s2">&quot;%CLEARCASE_PN%</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="w"></span>
+</code></pre></div>
+
+<h2 id="magic-file">Magic file<a class="headerlink" href="#magic-file" title="Permanent link">link</a></h2>
+<p>Edit <code>C:\Program Files\IBM\RationalSDLC\ClearCase\config\magic</code></p>
+<p>And add:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">bmp_image</span><span class="w"> </span><span class="nc">image</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="ss">&quot;*.[bB][mM][pP]&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h2 id="clearfsimport">clearfsimport<a class="headerlink" href="#clearfsimport" title="Permanent link">link</a></h2>
+<h3 id="lets-run-a-preview-first">Lets run a preview first<a class="headerlink" href="#lets-run-a-preview-first" title="Permanent link">link</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">clearfsimport</span> <span class="o">-</span><span class="n">recurse</span>  <span class="n">D</span><span class="p">:</span>\<span class="n">ClearCase_Storage</span>\<span class="n">exports</span>\<span class="n">has</span>\<span class="o">*</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">sa_clearcase_albdp</span>\<span class="n">sa_clearcase_albdp_view</span>\<span class="n">HealthAssessment</span>
+</code></pre></div>
+
+<h3 id="the-actual-import">The actual import<a class="headerlink" href="#the-actual-import" title="Permanent link">link</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">clearfsimport</span> <span class="o">-</span><span class="n">recurse</span> <span class="o">-</span><span class="n">preview</span>  <span class="n">D</span><span class="p">:</span>\<span class="n">ClearCase_Storage</span>\<span class="n">exports</span>\<span class="n">has</span>\<span class="o">*</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">sa_clearcase_albdp</span>\<span class="n">sa_clearcase_albdp_view</span>\<span class="n">HealthAssessment</span>
+</code></pre></div>
+
+<h3 id="look-out-for-errors">Look out for errors<a class="headerlink" href="#look-out-for-errors" title="Permanent link">link</a></h3>
+<p>Most likely its a wrongly name file - leading ClearCase to believe its a text file.</p>
+<p>Change it to a compressed_file and check in.</p>
+<div class="codehilite"><pre><span></span><code>$ cleartool chtype -force -nc compressed_file jquery-1.3.2.min.js
+</code></pre></div>
+
+<p>Run a lsco to verify.</p>
+<div class="codehilite"><pre><span></span><code>$ cleartool lsco -r
+</code></pre></div>
+
+<h2 id="sparc-migration">SPARC Migration<a class="headerlink" href="#sparc-migration" title="Permanent link">link</a></h2>
+<h3 id="lock-clearcase">Lock ClearCase<a class="headerlink" href="#lock-clearcase" title="Permanent link">link</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">cleartool</span><span class="w"> </span><span class="n">lock</span><span class="w"> </span><span class="n">vob</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ccase</span><span class="o">/</span><span class="n">vobs</span><span class="o">/</span><span class="n">development</span><span class="o">/</span><span class="n">imagine_vob</span><span class="w"></span>
+</code></pre></div>
+
+<h3 id="sync">Sync<a class="headerlink" href="#sync" title="Permanent link">link</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">rsync</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="o">--</span><span class="n">delete</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">vobstore</span><span class="o">/</span><span class="n">imagine_vob</span><span class="o">.</span><span class="n">vbs</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">clearcase_dumps</span><span class="w"></span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">rsync</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="o">--</span><span class="n">delete</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">vobstore</span><span class="o">/</span><span class="n">imagine_vob</span><span class="o">.</span><span class="n">vbs</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">sybase_dumps</span><span class="o">/</span><span class="n">usg</span><span class="w"></span>
+<span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">vobstore</span><span class="o">/</span><span class="n">imagine_vob</span><span class="o">.</span><span class="n">vbs</span><span class="w"></span>
+<span class="n">rm</span><span class="w"> </span><span class="o">-</span><span class="n">rf</span><span class="w"> </span><span class="n">db</span><span class="o">.</span><span class="mf">04.30</span><span class="w"></span>
+</code></pre></div>
+
+<h3 id="reformat">Reformat<a class="headerlink" href="#reformat" title="Permanent link">link</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">atria</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">cleartool</span><span class="w"> </span><span class="n">reformatvob</span><span class="w"> </span><span class="o">-</span><span class="n">dump</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">vobstore</span><span class="o">/</span><span class="n">imagine_vob</span><span class="o">.</span><span class="n">vbs</span><span class="w"></span>
+</code></pre></div>
+
+<h3 id="rsync-database-to-emgsyd-clearcase">Rsync database to emgsyd-clearcase<a class="headerlink" href="#rsync-database-to-emgsyd-clearcase" title="Permanent link">link</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">rsync</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="o">--</span><span class="n">delete</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="s2">&quot;ssh&quot;</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">vobstore</span><span class="o">/</span><span class="n">imagine_vob</span><span class="o">.</span><span class="n">vbs</span><span class="w"> </span><span class="n">emgsyd</span><span class="o">-</span><span class="n">clearcase</span><span class="p">:</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">clearcase</span><span class="o">/</span><span class="n">vobstore</span><span class="w"></span>
+<span class="c1">#rsync -a -v --delete -a -e &quot;ssh&quot; /usr/dev/vobstore/imagine_vob.vbs emgsydc6n2:/var/opt/clearcase_dumps</span><span class="w"></span>
+</code></pre></div>
+
+<p>This will take about 1 hour</p>
+<h3 id="load">Load<a class="headerlink" href="#load" title="Permanent link">link</a></h3>
+<p>Log into emgsyd-clearcase as clearadm</p>
+<ol>
+<li>Load the VOB</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">atria</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">cleartool</span><span class="w"> </span><span class="n">reformatvob</span><span class="w"> </span><span class="o">-</span><span class="nb">load</span><span class="w"> </span><span class="o">-</span><span class="n">host</span><span class="w"> </span><span class="n">emgsyd</span><span class="o">-</span><span class="n">clearcase</span><span class="w">  </span><span class="o">-</span><span class="n">hpath</span><span class="w"> </span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">clearcase</span><span class="o">/</span><span class="n">vobstore</span><span class="o">/</span><span class="n">imagine_vob</span><span class="o">.</span><span class="n">vbs</span><span class="w">  </span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">clearcase</span><span class="o">/</span><span class="n">vobstore</span><span class="o">/</span><span class="n">imagine_vob</span><span class="o">.</span><span class="n">vbs</span><span class="w"></span>
+</code></pre></div>
+
+<p>This will take about 1 hour</p>
+<ol>
+<li>Cleanup</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>cd /data/clearcase/vobstore/imagine_vob.vbs
+rm -rf db.X.X
+</code></pre></div>
+
+<ol>
+<li>Replace the triggers</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="n">cleartool</span><span class="w"> </span><span class="n">mktrtype</span><span class="w"> </span><span class="o">-</span><span class="n">replace</span><span class="w"> </span><span class="o">-</span><span class="n">element</span><span class="w"> </span><span class="o">-</span><span class="n">preop</span><span class="w"> </span><span class="n">MODIFY_DATA</span><span class="p">,</span><span class="n">MODIFY_ELEM</span><span class="p">,</span><span class="n">MODIFY_MD</span><span class="w"> </span><span class="o">-</span><span class="n">all</span><span class="w"> </span><span class="o">-</span><span class="n">execunix</span><span class="w">  </span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">emg</span><span class="o">-</span><span class="n">nfs</span><span class="o">-</span><span class="n">wslauz1prd</span><span class="o">/</span><span class="n">vol</span><span class="o">/</span><span class="n">vol_vfsydemg01</span><span class="o">/</span><span class="n">data_clearcase</span><span class="o">/</span><span class="n">triggers</span><span class="o">/</span><span class="n">unix</span><span class="o">/</span><span class="n">security_preop_all</span><span class="o">.</span><span class="n">sh</span><span class="w">  </span><span class="o">-</span><span class="n">execwin</span><span class="w"> </span><span class="s2">&quot;bash </span><span class="se">\\\\</span><span class="s2">emg-nfs-wslauz1prd\data_clearcase</span><span class="se">\t</span><span class="s2">riggers\win\security_preop_all.sh&quot;</span><span class="w"> </span><span class="n">EMGDEV_SECURITY</span><span class="w"></span>
+<span class="n">cleartool</span><span class="w"> </span><span class="n">mktrtype</span><span class="w"> </span><span class="o">-</span><span class="n">replace</span><span class="w"> </span><span class="o">-</span><span class="n">element</span><span class="w"> </span><span class="o">-</span><span class="n">eltype</span><span class="w"> </span><span class="n">text_file</span><span class="w"> </span><span class="o">-</span><span class="n">postop</span><span class="w"> </span><span class="n">checkout</span><span class="w"> </span><span class="o">-</span><span class="n">all</span><span class="w"> </span><span class="o">-</span><span class="n">execunix</span><span class="w">  </span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">emg</span><span class="o">-</span><span class="n">nfs</span><span class="o">-</span><span class="n">wslauz1prd</span><span class="o">/</span><span class="n">vol</span><span class="o">/</span><span class="n">vol_vfsydemg01</span><span class="o">/</span><span class="n">data_clearcase</span><span class="o">/</span><span class="n">triggers</span><span class="o">/</span><span class="n">unix</span><span class="o">/</span><span class="n">sccs_vars_postop_co_trigger</span><span class="o">.</span><span class="n">sh</span><span class="w"> </span><span class="o">-</span><span class="n">execwin</span><span class="w"> </span><span class="s2">&quot;bash </span><span class="se">\\\\</span><span class="s2">emg-nfs-wslauz1prd\data_clearcase</span><span class="se">\t</span><span class="s2">riggers\win\sccs_vars_postop_co_trigger_windows.sh&quot;</span><span class="w"> </span><span class="n">SCCS_KEY_CO</span><span class="w"></span>
+
+<span class="n">cleartool</span><span class="w"> </span><span class="n">mktrtype</span><span class="w"> </span><span class="o">-</span><span class="n">replace</span><span class="w"> </span><span class="o">-</span><span class="n">element</span><span class="w"> </span><span class="o">-</span><span class="n">eltype</span><span class="w"> </span><span class="n">text_file</span><span class="w"> </span><span class="o">-</span><span class="n">preop</span><span class="w"> </span><span class="n">checkin</span><span class="w"> </span><span class="o">-</span><span class="n">all</span><span class="w"> </span><span class="o">-</span><span class="n">execunix</span><span class="w"> </span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">emg</span><span class="o">-</span><span class="n">nfswslauz1prd</span><span class="o">/</span><span class="n">vol</span><span class="o">/</span><span class="n">vol_vfsydemg01</span><span class="o">/</span><span class="n">data_clearcase</span><span class="o">/</span><span class="n">triggers</span><span class="o">/</span><span class="n">unix</span><span class="o">/</span><span class="n">sccs_vars_preop_ci_trigger_quant</span><span class="o">.</span><span class="n">sh</span><span class="w"> </span><span class="o">-</span><span class="n">execwin</span><span class="w"> </span><span class="s2">&quot;bash </span><span class="se">\\\\</span><span class="s2">emg-nfs-wslauz1prd\data_clearcase</span><span class="se">\t</span><span class="s2">riggers\win\sccs_vars_preop_ci_trigger_quant.sh&quot;</span><span class="w"> </span><span class="n">SCCS_KEY_QUANT_CI</span><span class="w"></span>
+</code></pre></div>
+
+<ol>
+<li>Delete the views</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/sh</span>
+<span class="k">for</span> x <span class="k">in</span> <span class="sb">`</span>/usr/atria/bin/cleartool describe -long
+ vob:/data/clearcase/development/imagine_vob <span class="p">|</span> grep uuid <span class="p">|</span> awk <span class="s1">&#39;{print $3}&#39;</span> <span class="p">|</span> sed <span class="s2">&quot;s/]/ /g&quot;</span><span class="sb">`</span>
+<span class="k">do</span>
+/usr/atria/bin/cleartool rmview -all -uuid <span class="nv">$x</span>
+<span class="k">done</span>
+</code></pre></div>
+
+<ol>
+<li>Restart clearcase</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>sudo /opt/VRTSvcs/bin/hares -offline emgsydc6_clearcase_prd_clearcase_web_Application  -sys emgsydc6n1
+sudo /opt/VRTSvcs/bin/hares -offline emgsydc6_clearcase_prd_clearcase_Application  -sys emgsydc6n1
+sudo /opt/VRTSvcs/bin/hares -online  emgsydc6_clearcase_prd_clearcase_Application  -sys emgsydc6n1
+sudo /opt/VRTSvcs/bin/hares -online  emgsydc6_clearcase_prd_clearcase_web_Application -sys emgsydc6n1
+</code></pre></div>
+
+<p>Log into msgsydapp128 as clearadm</p>
+<ol>
+<li>Restart clearcase</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>/etc/init.d/clearcase stop
+/etc/init.d/clearcase start
+</code></pre></div>
+
+<p>Test as ladamson on emgsyd-clearcase</p>
+<ol>
+<li>Create view
+    cleartool mkview -tag lee_test -stgloc -auto
+    ...</li>
+</ol>
+<p>Test as ladamson on msgsydapp128</p>
+<p>Test on PC.</p>
+<p>Backout + Leave a read only of old repository.</p>
+<p>Log into emsdev1 as clearadm</p>
+<ol>
+<li>/usr/atria/bin/cleartool reformatvob -load /usr/dev/vobstore/imagine_vob.vbs</li>
+<li>If all has gone well:
+    cleartool lock vob:/usr/dev/ccase/vobs/development/imagine_vob
+    else, leave it unlocked.</li>
+</ol>
+<h1 id="cvs-to-clearcase-migration">CVS to ClearCase Migration<a class="headerlink" href="#cvs-to-clearcase-migration" title="Permanent link">link</a></h1>
+<h2 id="setting-your-environment">Setting your environment<a class="headerlink" href="#setting-your-environment" title="Permanent link">link</a></h2>
+<div class="codehilite"><pre><span></span><code>$ <span class="nb">set</span> <span class="nv">PATH</span><span class="o">=</span>%PATH%<span class="p">;</span>C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class="o">)</span><span class="se">\c</span>vsnt
+$ <span class="nb">set</span> <span class="nv">CVSROOT</span><span class="o">=</span>:local:c:<span class="se">\\</span>CVS_Storage<span class="se">\R</span>epository
+</code></pre></div>
+
+<h2 id="transfer-cvs-repository-to-migration-host">Transfer CVS repository to migration host<a class="headerlink" href="#transfer-cvs-repository-to-migration-host" title="Permanent link">link</a></h2>
+<div class="codehilite"><pre><span></span><code>$ /export/home/users/msatuser/bin/tar cf Repository.20130612.tar Repository
+</code></pre></div>
+
+<h2 id="running-clearexport_cvs">Running clearexport_cvs<a class="headerlink" href="#running-clearexport_cvs" title="Permanent link">link</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="n">c</span><span class="p">:</span>\<span class="n">CVS_Storage</span>\<span class="n">cvs_export</span>\<span class="n">Repository</span><span class="w"></span>
+<span class="n">c</span><span class="p">:</span><span class="w"></span>
+<span class="n">echo</span><span class="w"> </span><span class="n">Start</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="n">date</span><span class="o">%</span><span class="n">_</span><span class="o">%</span><span class="n">time</span><span class="o">%</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">clearexport_cvs</span><span class="w"> </span><span class="o">-</span><span class="n">V</span><span class="w"> </span><span class="o">-</span><span class="n">S</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">c</span><span class="p">:</span>\<span class="n">CVS_Storage</span>\<span class="n">cvs</span><span class="o">-</span><span class="n">cc</span><span class="o">-</span><span class="n">fmbs</span><span class="o">.</span><span class="n">dat</span><span class="w"> </span><span class="n">FMBS</span><span class="w">   </span><span class="o">&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">:</span>\<span class="n">CVS_Storage</span>\<span class="n">cvs</span><span class="o">-</span><span class="n">cc</span><span class="o">-</span><span class="n">fmbs</span><span class="o">.</span><span class="n">dat</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">txt</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="n">c</span><span class="p">:</span>\<span class="n">CVS_Storage</span>\<span class="n">cvs</span><span class="o">-</span><span class="n">cc</span><span class="o">-</span><span class="n">fmbs</span><span class="o">.</span><span class="n">dat</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">txt</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="n">Finish</span><span class="p">:</span><span class="w"> </span><span class="o">%</span><span class="n">date</span><span class="o">%</span><span class="n">_</span><span class="o">%</span><span class="n">time</span><span class="o">%</span><span class="w"></span>
+
+<span class="n">Completed</span><span class="o">.</span><span class="w"></span>
+<span class="n">Converting</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">...</span><span class="w"></span>
+<span class="n">Creating</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">...</span><span class="w"></span>
+<span class="n">Element</span><span class="w"> </span><span class="s2">&quot;WDRS\WDRS-web\WebDiagram.gph&quot;</span><span class="w"> </span><span class="n">completed</span><span class="o">.</span><span class="w"></span>
+<span class="n">Creating</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">c</span><span class="p">:</span>\<span class="n">CVS_Storage</span>\<span class="n">cvs</span><span class="o">-</span><span class="n">cc</span><span class="o">-</span><span class="n">wdrs</span><span class="o">.</span><span class="n">dat</span><span class="w"> </span><span class="o">...</span><span class="w"></span>
+</code></pre></div>
+
+<h2 id="running-clearimport">Running clearimport<a class="headerlink" href="#running-clearimport" title="Permanent link">link</a></h2>
+<p>Use any view. clearimport ignores the config spec. Using a dynamic view improves the performance of the import operation.
+Set your working directory to the VOB directory in which you plan to import the configuration. You can run clearimport from a location other than the VOB directory by specifying the VOB directory with the –d option. You must specify the pathname of the data file created by clearexport_ssafe</p>
+<div class="codehilite"><pre><span></span><code><span class="n">clearimport</span> <span class="o">-</span><span class="n">pcase</span> <span class="n">d</span><span class="p">:</span>\<span class="n">CVS_Storage</span>\<span class="n">vvs</span><span class="o">-</span><span class="n">cc</span><span class="o">-</span><span class="n">paycvt</span><span class="o">.</span><span class="n">dat</span>
+<span class="n">Validating</span> <span class="n">label</span> <span class="n">types</span><span class="o">.</span>
+<span class="n">Validating</span> <span class="n">directories</span> <span class="ow">and</span> <span class="n">symbolic</span> <span class="n">links</span><span class="o">.</span>
+<span class="n">Validating</span> <span class="n">elements</span><span class="o">.</span>
+<span class="n">Creating</span> <span class="n">element</span> <span class="err">“</span><span class="o">.</span>\<span class="n">bugfix</span><span class="o">/</span><span class="n">add</span><span class="o">.</span><span class="n">sql</span><span class="err">”</span><span class="o">.</span>
+   <span class="n">version</span> <span class="err">“</span><span class="mi">1</span><span class="err">”</span>
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+  <footer class="md-footer">
+    
+      <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+          
+            <a href="../cfg2html/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+              <div class="md-footer-nav__button md-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+              </div>
+              <div class="md-footer-nav__title">
+                <div class="md-ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  Cfg2html
+                </div>
+              </div>
+            </a>
+          
+          
+            <a href="../csv/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+              <div class="md-footer-nav__title">
+                <div class="md-ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  CVS
+                </div>
+              </div>
+              <div class="md-footer-nav__button md-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+              </div>
+            </a>
+          
+        </nav>
+      </div>
+    
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          
+            <div class="md-footer-copyright__highlight">
+              Copyright &copy; 2022
+            </div>
+          
+          </a>
+        </div>
+        <div class="md-social">
+  
+</div>
+      </div>
+    </div>
+  </footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+    
+  </body>
+</html>
